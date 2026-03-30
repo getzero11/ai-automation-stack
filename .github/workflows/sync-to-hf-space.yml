@@ -1,0 +1,27 @@
+name: Sync to Hugging Face Space
+
+on:
+  push:
+    branches:
+      - main # or master, or the branch you want to sync from
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # ensures all history is fetched, needed for LFS
+
+      - name: Push to Hugging Face Hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_USERNAME: ihealthcareanalyst@gmail.com # Replace with your HF username
+          SPACE_NAME: ihealthcareanalyst-n8n # Replace with your Space name
+        run: |
+          # Configure Git LFS if you have large files
+          git lfs install
+          # Add the Hugging Face remote
+          git remote add space https://huggingface.co
+          # Push the current branch to the HF space (force push overwrites remote changes)
+          git push --force space main:main
