@@ -1,12 +1,3 @@
----
-title: AI Automation Stack
-emoji: 🤖
-colorFrom: blue
-colorTo: purple
-sdk: docker
-app_port: 7860
----
-
 # AI Automation Stack
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
