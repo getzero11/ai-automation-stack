@@ -9,6 +9,11 @@ app_port: 7860
 
 # AI Automation Stack
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Node.js](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)
+
+
 A self-contained automation platform combining **n8n** (workflow engine), **Claude Code** (AI coding agent), **Ollama + Qwen** (local LLMs), **FastAPI** (agent API), **MCP** (automation control), and **Supabase Postgres** (external persistence).
 
 ---
